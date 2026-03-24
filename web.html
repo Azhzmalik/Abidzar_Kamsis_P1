@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AES Cipher Tool</title>
+    <link rel="stylesheet" href="style_Web.css">
+</head>
+
+<body>
+
+<div class="main-layout" id="mainLayout">
+
+    <!-- KIRI -->
+    <div class="left-panel">
+
+        <h1>🔐 Malik en/decryption tool</h1>
+
+        <label>Input Text / File</label>
+        <textarea id="text"></textarea>
+
+        <label>Upload Image</label>
+        <input type="file" id="imageInput" accept="image/*">
+        <p style="font-size:12px;opacity:0.7;">
+            Preview aktif saat menggunakan image 
+        </p>
+
+        <label>Upload File (.txt)</label>
+        <input type="file" id="fileInput">
+
+        <label>Mode Cipher</label>
+        <select id="mode">
+            <option value="ECB">ECB</option>
+            <option value="CBC">CBC</option>
+            <option value="CFB">CFB</option>
+            <option value="OFB">OFB</option>
+        </select>
+
+        <label>Key (String / Angka)</label>
+        <input id="key">
+
+        <label>Format Output</label>
+        <select id="format">
+            <option value="decimal">Decimal</option>
+            <option value="base64">Base64</option>
+        </select>
+
+        <div class="buttons">
+            <button onclick="encrypt()">Encrypt</button>
+            <button onclick="decrypt()">Decrypt</button>
+        </div>
+
+        <div id="leftOutput">
+            <label>Output</label>
+            <textarea id="result"></textarea>
+
+            <label>Hash</label>
+            <input id="hash" readonly>
+        </div>
+
+    </div>
+
+    <div class="right-panel">
+
+        <h3>🖼 Image Preview</h3>
+
+        <div class="image-container">
+            <div class="image-box">
+                <p>Original</p>
+                <img id="preview">
+            </div>
+
+            <div class="image-box">
+                <p>Decrypted</p>
+                <img id="resultImage">
+            </div>
+        </div>
+        
+        <div id="rightOutput"></div>
+
+    </div>
+
+</div>
+
+<script src="script_Web.js"></script>
+
+</body>
+</html>

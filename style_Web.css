@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+
+    background: linear-gradient(135deg, #667eea, #764ba2, #6dd5ed);
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-layout {
+    display: flex;
+    gap: 25px;
+    width: 1100px;
+}
+
+.left-panel, .right-panel {
+    flex: 1;
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.right-panel {
+    display: none;
+}
+
+.main-layout.split .right-panel {
+    display: block;
+}
+
+h1 {
+    text-align: center;
+    color: #4a4aff;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+textarea, input, select {
+    width: 97%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+textarea {
+    height: 98px;
+}
+
+#result {
+    height: 80px;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+button {
+    flex: 1;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    color: white;
+    background: linear-gradient(45deg,#36d1dc,#5b86e5);
+    cursor: pointer;
+}
+
+.image-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.image-box img {
+    width: 180px;
+    border-radius: 10px;
+}
