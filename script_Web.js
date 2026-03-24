@@ -393,4 +393,4 @@ function moveOutput() {
     if (!right.contains(left)) {
         right.appendChild(left);
     }
-}
+} 
